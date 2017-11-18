@@ -1,5 +1,9 @@
 class SalariesController < ApplicationController
+
+  include FileHelper
+
   def index
+
   end
 
   def import
@@ -12,8 +16,4 @@ class SalariesController < ApplicationController
     redirect_to root_url
   end
 
-  def isFileCsv(file)
-    fileName = file.original_filename;
-    return File.extname(fileName) == ".csv";
-  end
 end
