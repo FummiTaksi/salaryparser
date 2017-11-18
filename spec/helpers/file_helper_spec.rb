@@ -12,6 +12,10 @@ RSpec.describe FileHelper, type: :helper do
     expect(isFileCsv(pdfFile)).to eq false
   end
 
+  it "returns false if there is no file" do
+    expect(isFileCsv(nil)).to eq false
+  end
+
   def getFile(fileName)
     return ActionDispatch::Http::UploadedFile.new tempfile: 'tempfile', filename: fileName
   end
