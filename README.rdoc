@@ -2,6 +2,8 @@
 
 Ruby On Rails application for wage calculation
 
+Continous integration with Travis: [![Build Status](https://travis-ci.org/FummiTaksi/salaryparser.svg?branch=master)](https://travis-ci.org/FummiTaksi/salaryparser)
+
 * Ruby version
 
 * System dependencies
