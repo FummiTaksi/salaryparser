@@ -8,9 +8,3 @@ script:
  - RAILS_ENV=test bundle exec rake db:migrate --trace
  - bundle exec rake db:test:prepare
  - bundle exec rspec -fd spec/
-
- deploy:
-   app: csvwageapp
-   provider: heroku
-   api_key:
-     secure: "ab417981-4692-4d44-a834-fad39df1bb3f"

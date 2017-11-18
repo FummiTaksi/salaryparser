@@ -1,6 +1,5 @@
-== README
 
-Ruby On Rails application for Wage calculation from CSV files
+Ruby On Rails application for Wage calculation from CSV files: [App in heroku](https://csvwageapp.herokuapp.com/)
 
 Continous integration with Travis: [![Build Status](https://travis-ci.org/FummiTaksi/salaryparser.svg?branch=master)](https://travis-ci.org/FummiTaksi/salaryparser)
 
