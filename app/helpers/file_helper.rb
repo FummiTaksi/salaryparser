@@ -1,7 +1,7 @@
 module FileHelper
 
   require 'csv'
-  include SalariesHelper
+  include ReportsHelper
 
   def isFileCsv(file)
     fileName = file.original_filename;

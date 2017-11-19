@@ -1,4 +1,4 @@
-module SalariesHelper
+module ReportsHelper
 
   include DateHelper
 

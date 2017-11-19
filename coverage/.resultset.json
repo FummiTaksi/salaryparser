@@ -419,7 +419,7 @@
         null,
         null
       ],
-      "/Users/omistaja/salaryparser/app/helpers/salaries_helper.rb": [
+      "/Users/omistaja/salaryparser/app/helpers/reports_helper.rb": [
         1,
         null,
         1,
@@ -489,6 +489,28 @@
         138,
         9,
         null,
+        null,
+        null
+      ],
+      "/Users/omistaja/salaryparser/app/helpers/time_helper.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        4,
+        1,
+        null,
+        3,
+        2,
+        2,
+        null,
+        null,
+        1,
         null,
         null
       ],
@@ -624,7 +646,7 @@
         null,
         null
       ],
-      "/Users/omistaja/salaryparser/spec/helpers/salaries_helper_spec.rb": [
+      "/Users/omistaja/salaryparser/spec/helpers/reports_helper_spec.rb": [
         1,
         null,
         1,
@@ -763,6 +785,37 @@
         null,
         null
       ],
+      "/Users/omistaja/salaryparser/spec/helpers/time_helper_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/omistaja/salaryparser/spec/models/worker_spec.rb": [
         1,
         null,
@@ -889,6 +942,6 @@
         null
       ]
     },
-    "timestamp": 1511117799
+    "timestamp": 1511121067
   }
 }

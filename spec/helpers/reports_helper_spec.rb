@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe SalariesHelper, type: :helper do
+RSpec.describe ReportsHelper, type: :helper do
   let(:pekka){Worker.new workerId: 1, name: "pekka"}
   let(:jukka){Worker.new workerId: 2, name: "jukka"}
   let(:jukkis){Worker.new workerId: 2, name: "jukkis"}
