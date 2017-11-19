@@ -52,6 +52,11 @@ RSpec.describe Worker, type: :model do
 
     describe "returns false when " do
 
+      it "when param is nil" do
+        jukka = createWorker(1, "jukka");
+        expect(jukka.sameIdAndDifferentName(nil)).to be_falsey
+      end
+
       it "id is same and name is same " do
         jukka = createWorker(1, "jukka");
         jukka2 = createWorker(1, "jukka");
