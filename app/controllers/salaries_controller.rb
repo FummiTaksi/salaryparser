@@ -8,11 +8,7 @@ class SalariesController < ApplicationController
 
   def import
     file = params[:file];
-    if (isFileCsv(file))
-      flash[:notice]= "File uploaded successfully!"
-    else
-      flash[:error] = "File not .csv type!"
-    end
+    handleFile(file);
     redirect_to root_url
   end
 
