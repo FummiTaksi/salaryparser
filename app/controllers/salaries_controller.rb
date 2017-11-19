@@ -1,6 +1,6 @@
 class SalariesController < ApplicationController
 
-  include FileHelper
+  include FileHelper,SalariesHelper
 
   def index
 

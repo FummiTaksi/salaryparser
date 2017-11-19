@@ -26,7 +26,7 @@ describe "Uploading file from the root-page" do
     it "user imports a .csv file " do
       attach_file("file", Rails.root + "spec/testfiles/correctWageFile.csv");
       click_on("Import CSV");
-      expect(page).to have_content "File uploaded successfully!"
+      expect(page).to have_content "File is in the right format!"
     end
 
   end

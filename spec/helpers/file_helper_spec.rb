@@ -5,7 +5,8 @@ RSpec.describe FileHelper, type: :helper do
   let(:pdfFile){getPdfFile()}
 
   def getFile(fileName)
-    return ActionDispatch::Http::UploadedFile.new tempfile: 'tempfile', filename: fileName
+    file =  ActionDispatch::Http::UploadedFile.new tempfile: 'tempfile', filename: fileName;
+    return file;
   end
 
   def getCsvFile()
@@ -41,11 +42,6 @@ RSpec.describe FileHelper, type: :helper do
 
   describe "defineFileType" do
 
-    it "shows flash notice if file is .csv type" do
-        defineFileType(csvFile);
-        expect(flash[:notice]).to be_present
-    end
-
     it "shows flash error if file is not .csv type" do
         defineFileType(pdfFile);
         expect(flash[:error]).to be_present
@@ -60,16 +56,12 @@ RSpec.describe FileHelper, type: :helper do
         expect(flash[:error]).to be_present
     end
 
-    it "shows flash notice if file is .csv type" do
-        handleFile(csvFile);
-        expect(flash[:notice]).to be_present
-    end
-
     it "shows flash error if file is not .csv type" do
         handleFile(pdfFile);
         expect(flash[:error]).to be_present
     end
   end
+
 
 
 
