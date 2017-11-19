@@ -50,6 +50,12 @@ describe "Uploading file from the root-page" do
       expect(page).to have_content "File is in wrong format. Please modify file and try again."
     end
 
+    it "user imports a file which has two month in it" do
+      attach_file("file", Rails.root + "spec/testfiles/fileWithTwoMonths.csv");
+      click_on("Import CSV");
+      expect(page).to have_content "File is in wrong format. Please modify file and try again."
+    end
+
 
   end
 

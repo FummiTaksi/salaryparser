@@ -23,11 +23,14 @@ RSpec.describe SalariesHelper, type: :helper do
   end
 
   describe "fileIsInRightFormatForCalculation " do
+
     describe "returns true when " do
+
       it "file is correct" do
         correctFile = getCorrectCsvFile();
         expect(fileIsInRightFormatForCalculation(correctFile)).to be_truthy
       end
+
     end
 
     describe "returns false when " do
@@ -54,6 +57,11 @@ RSpec.describe SalariesHelper, type: :helper do
 
       it "end time is not valid" do
         file = getFileByName("endTimeNotCorrect.csv");
+        expect(fileIsInRightFormatForCalculation(file)).to be_falsey
+      end
+
+      it "has two months" do
+        file = getFileByName("fileWithTwoMonths.csv");
         expect(fileIsInRightFormatForCalculation(file)).to be_falsey
       end
 

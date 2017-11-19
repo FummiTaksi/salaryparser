@@ -1,11 +1,19 @@
 module SalariesHelper
 
+  include DateHelper
+
   def fileIsInRightFormatForCalculation(file)
     workers = [];
+    date = nil;
     CSV.foreach(file.path, headers: true) do |row|
       if (!checkIfRowsDataIsLegit(row))
         return false;
       end
+      newDate = row["Date"].to_date;
+      if (!date.nil? && !areDatesInSameMonth(date, newDate))
+        return false;
+      end
+      date = newDate;
       worker = Worker.new(workerId: row["Person ID"], name: row["Person Name"]);
       if (thereIsWorkerWithSameIdButDifferentName(workers,worker))
         return false;
@@ -26,10 +34,6 @@ module SalariesHelper
              date.to_date.is_a?(Date) && isClockTime(row["Start"]) && isClockTime(row["End"]);
   end
 
-  def isValidDate(date)
-    /\A(?:0?[1-9]|1[0-2])\/(?:0?[1-9]|[1-2]\d|3[01])\/\d{4}\Z/.match(date)
-  end
-
   def nameIsNotEmpty(name)
     if name.nil?
       return false;
@@ -39,10 +43,6 @@ module SalariesHelper
 
   def isNumber(param)
     /^[0-9]+$/.match(param)
-  end
-
-  def isClockTime(param)
-    /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.match(param)
   end
 
   def thereIsWorkerWithSameIdButDifferentName(workers,newWorker)
