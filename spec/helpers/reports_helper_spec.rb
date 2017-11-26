@@ -15,7 +15,7 @@ RSpec.describe ReportsHelper, type: :helper do
   end
 
   def getCorrectCsvFile
-    return File.open(File.expand_path("#{Rails.root}/spec/testfiles/correctWageFile.csv"), 'r');
+    return File.open(File.expand_path("#{Rails.root}/spec/testfiles/correctCsvFileShort.csv"), 'r');
   end
 
   def getFileByName(fileName)
@@ -131,6 +131,71 @@ RSpec.describe ReportsHelper, type: :helper do
         addWorkerToList(array,pekka);
         expect(array.length).to eq 1
       end
+    end
+  end
+
+  describe "convertDataToWorkshift " do
+
+    let(:workshift){convertDataToWorkShift(Date.new(2015,6,6),"20:00","21:55")}
+
+    it "starthour is correct " do
+      expect(workshift.starttime.hour).to eq 20;
+    end
+
+    it "startminute is correct " do
+      expect(workshift.starttime.minute).to eq 0;
+    end
+
+    it "endhour is correct" do
+      expect(workshift.endtime.hour).to eq 21;
+    end
+
+    it "endminute is correct" do
+      expect(workshift.endtime.minute).to eq 55;
+    end
+  end
+
+  describe "getWorkerById " do
+
+    describe "when id matches " do
+
+      it "returns correct worker object" do
+        worker = getWorkerById(arrayOfPekka, 1);
+        expect(worker.name).to eq "pekka";
+      end
+    end
+
+    describe "when id dont match " do
+
+      it "returns nil" do
+        worker = getWorkerById(arrayOfPekka, 2);
+        expect(worker).to eq nil;
+      end
+    end
+  end
+
+  describe "calculateMonthlyWages " do
+    let(:file){getCorrectCsvFile()}
+    let(:workers){calculateMonthlyWages(file)}
+
+    it "returns correct amount of workers " do
+      expect(workers.length).to eq 3;
+    end
+
+    it "first has correct wage" do
+      expect(workers[0].wage).to eq 59.0625
+    end
+
+    it "first person on list is correct" do
+      expect(workers[0].name).to eq "Scott Scala"
+    end
+
+    it "second person is correct" do
+      expect(workers[1].name).to eq "Janet Java"
+    end
+
+    it "third person is correct" do
+      expect(workers[2].name).to eq "Larry Lolcode"
     end
   end
 
