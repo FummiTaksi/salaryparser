@@ -205,4 +205,13 @@ RSpec.describe Workshift, type: :model do
     end
   end
 
+  describe "calculateWage " do
+    it "returns correct" do
+      startTime = DateTime.new(2015,5,5,8,0,0);
+      endTime = DateTime.new(2015,5,5,19,0,0)
+      workshift = Workshift.new(starttime: startTime, endtime: endTime);
+      expect(workshift.calculateWage).to eq 57.4
+    end
+  end
+
 end

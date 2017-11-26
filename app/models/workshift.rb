@@ -16,6 +16,10 @@ class Workshift
     return countDifferenceInHours * 3.75;
   end
 
+  def calculateWage
+    return countTheNormalWage + calculateOverTimeBonus + calculateEveningBonus;
+  end
+
   def countEveningBonusTime
     sixInTheMorning = DateTime.new(starttime.year, starttime.month, starttime.day + 1 , 6, 0, 0);
     if shiftStartedInNightHours

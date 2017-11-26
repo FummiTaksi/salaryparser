@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a0541cb-6d2b-4ba0-9253-da5d47aab799" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/workshift.rb" afterPath="$PROJECT_DIR$/app/models/workshift.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.last_run.json" afterPath="$PROJECT_DIR$/coverage/.last_run.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.resultset.json" afterPath="$PROJECT_DIR$/coverage/.resultset.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/workshift_spec.rb" afterPath="$PROJECT_DIR$/spec/models/workshift_spec.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -48,8 +45,8 @@
       <file leaf-file-name="workshift_spec.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/models/workshift_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="202" column="61" lean-forward="false" selection-start-line="202" selection-start-column="61" selection-end-line="202" selection-end-column="61" />
+            <state relative-caret-position="442">
+              <caret line="212" column="48" lean-forward="false" selection-start-line="212" selection-start-column="48" selection-end-line="212" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -58,8 +55,8 @@
       <file leaf-file-name="workshift.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/workshift.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+            <state relative-caret-position="-8">
+              <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -599,12 +596,12 @@
       <updated>1511020286089</updated>
       <workItem from="1511020288669" duration="11241000" />
       <workItem from="1511079606542" duration="26246000" />
-      <workItem from="1511698314690" duration="10931000" />
+      <workItem from="1511698314690" duration="11275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48418000" />
+    <option name="totallyTimeSpent" value="48762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="23" y="23" width="1257" height="701" extended-state="0" />
@@ -1005,16 +1002,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/workshift.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+        <state relative-caret-position="-8">
+          <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/workshift_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="202" column="61" lean-forward="false" selection-start-line="202" selection-start-column="61" selection-end-line="202" selection-end-column="61" />
+        <state relative-caret-position="442">
+          <caret line="212" column="48" lean-forward="false" selection-start-line="212" selection-start-column="48" selection-end-line="212" selection-end-column="48" />
           <folding />
         </state>
       </provider>
