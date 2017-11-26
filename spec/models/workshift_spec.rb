@@ -150,4 +150,59 @@ RSpec.describe Workshift, type: :model do
     end
   end
 
+  describe "calculateOverTimeBonus " do
+    it "returns 0 when no overtime" do
+      startTime = DateTime.new(2015,5,5,16,0,0);
+      endTime = DateTime.new(2015,5,5,17,1,0)
+      workshift = Workshift.new(starttime: startTime, endtime: endTime);
+      expect(workshift.calculateOverTimeBonus).to eq 0.0
+    end
+
+    describe "when working time is less or equal to 10 " do
+
+      it "returns correct when one hour overtime" do
+        startTime = DateTime.new(2015,5,5,10,0,0);
+        endTime = DateTime.new(2015,5,5,19,0,0)
+        workshift = Workshift.new(starttime: startTime, endtime: endTime);
+        expect(workshift.calculateOverTimeBonus).to eq 4.6875
+      end
+
+      it "returns correct when two hours overtime" do
+        startTime = DateTime.new(2015,5,5,10,0,0);
+        endTime = DateTime.new(2015,5,5,20,0,0)
+        workshift = Workshift.new(starttime: startTime, endtime: endTime);
+        expect(workshift.calculateOverTimeBonus).to eq 9.375
+      end
+    end
+
+    describe "when working time is between 10 and 12" do
+      it "counts correct when 11 hours of overtime" do
+        startTime = DateTime.new(2015,5,5,10,0,0);
+        endTime = DateTime.new(2015,5,5,21,0,0)
+        workshift = Workshift.new(starttime: startTime, endtime: endTime);
+        expect(workshift.calculateOverTimeBonus).to eq 15.0
+      end
+    end
+
+    describe "when working time is 12 " do
+
+      it "returns correctly" do
+        startTime = DateTime.new(2015,5,5,10,0,0);
+        endTime = DateTime.new(2015,5,5,22,0,0)
+        workshift = Workshift.new(starttime: startTime, endtime: endTime);
+        expect(workshift.calculateOverTimeBonus).to eq 20.625
+      end
+
+    end
+
+    describe "when working time is 15 " do
+      it "returns correctly" do
+        startTime = DateTime.new(2015,5,5,10,0,0);
+        endTime = DateTime.new(2015,5,6,1,0,0)
+        workshift = Workshift.new(starttime: startTime, endtime: endTime);
+        expect(workshift.calculateOverTimeBonus).to eq 43.125
+      end
+    end
+  end
+
 end
