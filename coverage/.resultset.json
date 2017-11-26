@@ -957,6 +957,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -964,10 +965,17 @@
       ],
       "/Users/omistaja/salaryparser/app/models/workshift.rb": [
         1,
+        1,
+        null,
+        1,
         null,
         1,
         1,
         null,
+        null,
+        1,
+        4,
+        4,
         null,
         null
       ],
@@ -996,6 +1004,6 @@
         null
       ]
     },
-    "timestamp": 1511710591
+    "timestamp": 1511711732
   }
 }
