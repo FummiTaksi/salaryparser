@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126154802) do
+ActiveRecord::Schema.define(version: 20171126175951) do
 
   create_table "reports", force: :cascade do |t|
     t.integer  "month"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20171126154802) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float    "wage"
   end
 
 end

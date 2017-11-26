@@ -72,6 +72,22 @@ RSpec.describe Worker, type: :model do
     end
   end
 
+  describe "addWage " do
+
+    it "adds to amount" do
+      worker = Worker.new workerId: 1, name: "worker", wage: 0.0;
+      worker.addWage(5.0);
+      expect(worker.wage).to eq 5.0;
+    end
+
+    it "dont add to amount if its negative" do
+      worker = Worker.new workerId: 1, name: "worker", wage: 0.0;
+      worker.addWage(-5.0);
+      expect(worker.wage).to eq 0.0;
+    end
+
+  end
+
   def createWorker(workerId, name)
       return Worker.new workerId: workerId, name: name;
   end
