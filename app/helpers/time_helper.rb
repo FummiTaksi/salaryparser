@@ -11,4 +11,12 @@ module TimeHelper
     end
     return false;
   end
+
+  def generateWorkShift(date, startHour, startMinute, endHour, endMinute)
+    startTime = DateTime.new(date.year, date.month, date.day, startHour, startMinute, 0);
+    endTimeDay = endTimeIsOnNextDay(startHour, startMinute, endHour, endMinute) ?  date.day + 1 : date.day;
+    endTime = DateTime.new(date.year, date.month, endTimeDay, endHour, endMinute, 0);
+    return Workshift.new(starttime: startTime , endtime: endTime);
+  end
+
 end
